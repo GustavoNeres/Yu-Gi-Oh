@@ -1,0 +1,7 @@
+{
+  "name": "Yu-Gi-Oh",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
