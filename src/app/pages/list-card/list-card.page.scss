@@ -2,3 +2,19 @@ ion-img{
     width: 25%;
     margin-bottom: 20px;
 }
+.flex-colum{
+    display: flex;
+    flex-direction: column;
+}
+.bold{
+    font-weight: bold;
+}
+h6{
+    font-size: 14px;
+}
+.flex-center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,22 @@
+<ion-content>
+  <ion-grid *ngIf="cardDetails"  fixed>
+    <ion-row class="ion-justify-content-center">
+      <div class="backfround"></div>
+      <ion-icon color="light" (click)="close()" name="close-circle" class="closeIcon"></ion-icon>
+      <ion-col size="8"></ion-col>
+      <img width="80%" [src]="cardDetails.card_images[0].image_url" />
+    </ion-row>
+    <ion-row>
+      <ion-col size="12"><h5 class="bold">{{cardDetails.name}}</h5></ion-col>
+      <ion-col size="12"> <h6><label class="bold"> Tipo: </label>   {{checkType(cardDetails.type)}}</h6></ion-col>
+      <ion-col *ngIf="cardDetails.type !== 'Trap Card' && cardDetails.type !== 'Spell Card'" size="6"><h6><label class="bold">ATK: </label>{{cardDetails.atk}} </h6>  </ion-col>  
+      <ion-col *ngIf="cardDetails.type !== 'Trap Card' && cardDetails.type !== 'Spell Card'"  size="6"><h6><label class="bold">DEF: </label>{{cardDetails.def}} </h6>  </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <label class="bold"> Descrição/Efeito </label>
+        <h6>{{cardDetails.desc}}</h6>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
